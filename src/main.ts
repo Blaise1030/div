@@ -1,4 +1,4 @@
-import {div, input, option, section, select, span} from "./index.ts";
+import {div, input, option, section, select, span} from "structr-composer";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = div(
   {class: "flex flex-col space-y-4 bg-red-200"},
@@ -15,8 +15,3 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = div(
     section({}, div({id: "main-view"}, "")),
   ])
 );
-
-// const Button = (att: {[x: string]: string}, children: string | string[]) => {
-//   const className = [att["class"], ""].join(" ");
-//   return button({...att, class: className}, children);
-// };
