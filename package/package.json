@@ -1,6 +1,6 @@
 {
   "name": "structr-composer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -9,5 +9,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blaise1030/structr-composer.git"
+  }
 }
