@@ -1,5 +1,5 @@
-import {html} from "../package/src/html-escape";
-import {div, input, button} from "../package/src/index";
+import {tag, html} from "./package";
+const {div, input, button} = tag;
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = div(
   {class: "flex flex-col space-y-4 bg-red-200"},
