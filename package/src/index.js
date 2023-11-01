@@ -1,129 +1,835 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.colgroup = exports.col = exports.caption = exports.canvas = exports.source = exports.picture = exports.object = exports.noembed = exports.iframe = exports.embed = exports.video = exports.track = exports.map = exports.img = exports.audio = exports.area = exports.time = exports.sup = exports.sub = exports.strong = exports.span = exports.small = exports.b = exports.i = exports.em = exports.code = exports.br = exports.a = exports.ul = exports.pre = exports.p = exports.ol = exports.li = exports.hr = exports.div = exports.blockquote = exports.section = exports.nav = exports.main = exports.h5 = exports.h4 = exports.h3 = exports.h2 = exports.h1 = exports.header = exports.footer = exports.aside = exports.article = exports.address = exports.html = void 0;
-exports.comp = exports.summary = exports.details = exports.textarea = exports.select = exports.option = exports.optgroup = exports.meter = exports.legend = exports.label = exports.input = exports.form = exports.fieldset = exports.datalist = exports.button = exports.tr = exports.thead = exports.th = exports.tfoot = exports.td = exports.tbody = exports.table = void 0;
-exports.html = comp(function (att, inner) { return "<html ".concat(att, ">").concat(inner, "</html>"); });
-exports.address = comp(function (att, inner) {
-    return "<address ".concat(att, ">").concat(inner, "</address>");
+var __makeTemplateObject =
+  (this && this.__makeTemplateObject) ||
+  function (cooked, raw) {
+    if (Object.defineProperty) {
+      Object.defineProperty(cooked, "raw", {value: raw});
+    } else {
+      cooked.raw = raw;
+    }
+    return cooked;
+  };
+var __spreadArray =
+  (this && this.__spreadArray) ||
+  function (to, from, pack) {
+    if (pack || arguments.length === 2)
+      for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+          if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+          ar[i] = from[i];
+        }
+      }
+    return to.concat(ar || Array.prototype.slice.call(from));
+  };
+Object.defineProperty(exports, "__esModule", {value: true});
+exports.noembed =
+  exports.iframe =
+  exports.embed =
+  exports.video =
+  exports.track =
+  exports.map =
+  exports.img =
+  exports.audio =
+  exports.area =
+  exports.time =
+  exports.sup =
+  exports.sub =
+  exports.strong =
+  exports.span =
+  exports.small =
+  exports.b =
+  exports.i =
+  exports.em =
+  exports.code =
+  exports.br =
+  exports.a =
+  exports.ul =
+  exports.pre =
+  exports.p =
+  exports.ol =
+  exports.li =
+  exports.hr =
+  exports.div =
+  exports.blockquote =
+  exports.section =
+  exports.nav =
+  exports.main =
+  exports.h5 =
+  exports.h4 =
+  exports.h3 =
+  exports.h2 =
+  exports.h1 =
+  exports.header =
+  exports.footer =
+  exports.aside =
+  exports.article =
+  exports.address =
+  exports.style =
+  exports.body =
+  exports.html =
+  exports.script =
+  exports.title =
+  exports.link =
+  exports.meta =
+  exports.head =
+    void 0;
+exports.comp =
+  exports.summary =
+  exports.details =
+  exports.textarea =
+  exports.select =
+  exports.option =
+  exports.optgroup =
+  exports.meter =
+  exports.legend =
+  exports.label =
+  exports.input =
+  exports.form =
+  exports.fieldset =
+  exports.datalist =
+  exports.button =
+  exports.tr =
+  exports.thead =
+  exports.th =
+  exports.tfoot =
+  exports.td =
+  exports.tbody =
+  exports.table =
+  exports.colgroup =
+  exports.col =
+  exports.caption =
+  exports.canvas =
+  exports.source =
+  exports.picture =
+  exports.object =
+    void 0;
+var html_escape_1 = require("./html-escape");
+exports.head = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["<head ", ">", "</head>"], ["<head ", ">", "</head>"])), att, inner);
 });
-exports.article = comp(function (att, inner) {
-    return "<article ".concat(att, ">").concat(inner, "</article>");
+exports.meta = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["<meta ", ">", "</meta>"], ["<meta ", ">", "</meta>"])), att, inner);
 });
-exports.aside = comp(function (att, inner) { return "<aside ".concat(att, ">").concat(inner, "</aside>"); });
-exports.footer = comp(function (att, inner) { return "<footer ".concat(att, ">").concat(inner, "</footer>"); });
-exports.header = comp(function (att, inner) { return "<header ".concat(att, ">").concat(inner, "</header>"); });
-exports.h1 = comp(function (att, inner) { return "<h1 ".concat(att, ">").concat(inner, "</h1>"); });
-exports.h2 = comp(function (att, inner) { return "<h2 ".concat(att, ">").concat(inner, "</h2>"); });
-exports.h3 = comp(function (att, inner) { return "<h3 ".concat(att, ">").concat(inner, "</h3>"); });
-exports.h4 = comp(function (att, inner) { return "<h4 ".concat(att, ">").concat(inner, "</h4>"); });
-exports.h5 = comp(function (att, inner) { return "<h5 ".concat(att, ">").concat(inner, "</h5>"); });
-exports.main = comp(function (att, inner) { return "<main ".concat(att, ">").concat(inner, "</main>"); });
-exports.nav = comp(function (att, inner) { return "<nav ".concat(att, ">").concat(inner, "</nav>"); });
-exports.section = comp(function (att, inner) {
-    return "<section ".concat(att, ">").concat(inner, "</section>");
+exports.link = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["<link ", ">", "</link>"], ["<link ", ">", "</link>"])), att, inner);
 });
-exports.blockquote = comp(function (att, inner) {
-    return "<blockquote ".concat(att, ">").concat(inner, "</blockquote>");
+exports.title = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["<title ", ">", "</title>"], ["<title ", ">", "</title>"])), att, inner);
 });
-exports.div = comp(function (att, inner) { return "<div ".concat(att, ">").concat(inner, "</div>"); });
-exports.hr = comp(function (att, inner) { return "<hr ".concat(att, ">").concat(inner, "</hr>"); });
-exports.li = comp(function (att, inner) { return "<li ".concat(att, ">").concat(inner, "</li>"); });
-exports.ol = comp(function (att, inner) { return "<ol ".concat(att, ">").concat(inner, "</ol>"); });
-exports.p = comp(function (att, inner) { return "<p ".concat(att, ">").concat(inner, "</p>"); });
-exports.pre = comp(function (att, inner) { return "<pre ".concat(att, ">").concat(inner, "</pre>"); });
-exports.ul = comp(function (att, inner) { return "<ul ".concat(att, ">").concat(inner, "</ul>"); });
-exports.a = comp(function (att, inner) { return "<a ".concat(att, ">").concat(inner, "</a>"); });
-exports.br = comp(function () { return "<br>"; });
-exports.code = comp(function (att, inner) { return "<code ".concat(att, ">").concat(inner, "</code>"); });
-exports.em = comp(function (att, inner) { return "<em ".concat(att, ">").concat(inner, "</em>"); });
-exports.i = comp(function (att, inner) { return "<i ".concat(att, ">").concat(inner, "</i>"); });
-exports.b = comp(function (att, inner) { return "<b ".concat(att, ">").concat(inner, "</b>"); });
-exports.small = comp(function (att, inner) { return "<small ".concat(att, ">").concat(inner, "</small>"); });
-exports.span = comp(function (att, inner) { return "<span ".concat(att, ">").concat(inner, "</span>"); });
-exports.strong = comp(function (att, inner) { return "<strong ".concat(att, ">").concat(inner, "</strong>"); });
-exports.sub = comp(function (att, inner) { return "<sub ".concat(att, ">").concat(inner, "</sub>"); });
-exports.sup = comp(function (att, inner) { return "<sup ".concat(att, ">").concat(inner, "</sup>"); });
-exports.time = comp(function (att, inner) { return "<time ".concat(att, ">").concat(inner, "</time>"); });
-exports.area = comp(function (att, inner) { return "<area ".concat(att, ">").concat(inner, "</area>"); });
-exports.audio = comp(function (att, inner) { return "<audio ".concat(att, ">").concat(inner, "</audio>"); });
-exports.img = comp(function (att, inner) { return "<img ".concat(att, ">").concat(inner, "</img>"); });
-exports.map = comp(function (att, inner) { return "<map ".concat(att, ">").concat(inner, "</map>"); });
-exports.track = comp(function (att, inner) { return "<track ".concat(att, ">").concat(inner, "</track>"); });
-exports.video = comp(function (att, inner) { return "<video ".concat(att, ">").concat(inner, "</video>"); });
-exports.embed = comp(function (att, inner) { return "<embed ".concat(att, ">").concat(inner, "</embed>"); });
-exports.iframe = comp(function (att, inner) { return "<iframe ".concat(att, ">").concat(inner, "</iframe>"); });
-exports.noembed = comp(function (att, inner) {
-    return "<noembed ".concat(att, ">").concat(inner, "</noembed>");
+exports.script = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_5 || (templateObject_5 = __makeTemplateObject(["<script ", ">", "</script>"], ["<script ", ">", "</script>"])), att, inner);
 });
-exports.object = comp(function (att, inner) { return "<object ".concat(att, ">").concat(inner, "</object>"); });
-exports.picture = comp(function (att, inner) {
-    return "<picture ".concat(att, ">").concat(inner, "</picture>");
+exports.html = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_6 || (templateObject_6 = __makeTemplateObject(["<html ", ">", "</html>"], ["<html ", ">", "</html>"])), att, inner);
 });
-exports.source = comp(function (att, inner) { return "<source ".concat(att, ">").concat(inner, "</source>"); });
-exports.canvas = comp(function (att, inner) { return "<canvas ".concat(att, ">").concat(inner, "</canvas>"); });
-exports.caption = comp(function (att, inner) {
-    return "<caption ".concat(att, ">").concat(inner, "</caption>");
+exports.body = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["<body ", ">", "</body>"], ["<body ", ">", "</body>"])), att, inner);
 });
-exports.col = comp(function (att, inner) { return "<col ".concat(att, ">").concat(inner, "</col>"); });
-exports.colgroup = comp(function (att, inner) {
-    return "<colgroup ".concat(att, ">").concat(inner, "</colgroup>");
+exports.style = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_8 || (templateObject_8 = __makeTemplateObject(["<style ", ">", "</style>"], ["<style ", ">", "</style>"])), att, inner);
 });
-exports.table = comp(function (att, inner) { return "<table ".concat(att, ">").concat(inner, "</table>"); });
-exports.tbody = comp(function (att, inner) { return "<tbody ".concat(att, ">").concat(inner, "</tbody>"); });
-exports.td = comp(function (att, inner) { return "<td ".concat(att, ">").concat(inner, "</td>"); });
-exports.tfoot = comp(function (att, inner) { return "<tfoot ".concat(att, ">").concat(inner, "</tfoot>"); });
-exports.th = comp(function (att, inner) { return "<th ".concat(att, ">").concat(inner, "</th>"); });
-exports.thead = comp(function (att, inner) { return "<thead ".concat(att, ">").concat(inner, "</thead>"); });
-exports.tr = comp(function (att, inner) { return "<tr ".concat(att, ">").concat(inner, "</tr>"); });
-exports.button = comp(function (att, inner) { return "<button ".concat(att, ">").concat(inner, "</button>"); });
-exports.datalist = comp(function (att, inner) {
-    return "<datalist ".concat(att, ">").concat(inner, "</datalist>");
+exports.address = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_9 || (templateObject_9 = __makeTemplateObject(["<address ", ">", "</address>"], ["<address ", ">", "</address>"])), att, inner);
 });
-exports.fieldset = comp(function (att, inner) {
-    return "<fieldset ".concat(att, ">").concat(inner, "</fieldset>");
+exports.article = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_10 || (templateObject_10 = __makeTemplateObject(["<article ", ">", "</article>"], ["<article ", ">", "</article>"])), att, inner);
 });
-exports.form = comp(function (att, inner) { return "<form ".concat(att, ">").concat(inner, "</form>"); });
-exports.input = comp(function (att, inner) { return "<input ".concat(att, ">").concat(inner, "</input>"); });
-exports.label = comp(function (att, inner) { return "<label ".concat(att, ">").concat(inner, "</label>"); });
-exports.legend = comp(function (att, inner) { return "<legend ".concat(att, ">").concat(inner, "</legend>"); });
-exports.meter = comp(function (att, inner) { return "<meter ".concat(att, ">").concat(inner, "</meter>"); });
-exports.optgroup = comp(function (att, inner) {
-    return "<optgroup ".concat(att, ">").concat(inner, "</optgroup>");
+exports.aside = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_11 || (templateObject_11 = __makeTemplateObject(["<aside ", ">", "</aside>"], ["<aside ", ">", "</aside>"])), att, inner);
 });
-exports.option = comp(function (att, inner) { return "<option ".concat(att, ">").concat(inner, "</option>"); });
-exports.select = comp(function (att, inner) { return "<select ".concat(att, ">").concat(inner, "</select>"); });
-exports.textarea = comp(function (att, inner) {
-    return "<textarea ".concat(att, ">").concat(inner, "</textarea>");
+exports.footer = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_12 || (templateObject_12 = __makeTemplateObject(["<footer ", ">", "</footer>"], ["<footer ", ">", "</footer>"])), att, inner);
 });
-exports.details = comp(function (att, inner) {
-    return "<details ".concat(att, ">").concat(inner, "</details>");
+exports.header = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_13 || (templateObject_13 = __makeTemplateObject(["<header ", ">", "</header>"], ["<header ", ">", "</header>"])), att, inner);
 });
-exports.summary = comp(function (att, inner) {
-    return "<summary ".concat(att, ">").concat(inner, "</summary>");
+exports.h1 = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_14 || (templateObject_14 = __makeTemplateObject(["<h1 ", ">", "</h1>"], ["<h1 ", ">", "</h1>"])), att, inner);
+});
+exports.h2 = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_15 || (templateObject_15 = __makeTemplateObject(["<h2 ", ">", "</h2>"], ["<h2 ", ">", "</h2>"])), att, inner);
+});
+exports.h3 = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_16 || (templateObject_16 = __makeTemplateObject(["<h3 ", ">", "</h3>"], ["<h3 ", ">", "</h3>"])), att, inner);
+});
+exports.h4 = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_17 || (templateObject_17 = __makeTemplateObject(["<h4 ", ">", "</h4>"], ["<h4 ", ">", "</h4>"])), att, inner);
+});
+exports.h5 = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_18 || (templateObject_18 = __makeTemplateObject(["<h5 ", ">", "</h5>"], ["<h5 ", ">", "</h5>"])), att, inner);
+});
+exports.main = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_19 || (templateObject_19 = __makeTemplateObject(["<main ", ">", "</main>"], ["<main ", ">", "</main>"])), att, inner);
+});
+exports.nav = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_20 || (templateObject_20 = __makeTemplateObject(["<nav ", ">", "</nav>"], ["<nav ", ">", "</nav>"])), att, inner);
+});
+exports.section = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_21 || (templateObject_21 = __makeTemplateObject(["<section ", ">", "</section>"], ["<section ", ">", "</section>"])), att, inner);
+});
+exports.blockquote = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_22 || (templateObject_22 = __makeTemplateObject(["<blockquote ", ">", "</blockquote>"], ["<blockquote ", ">", "</blockquote>"])), att, inner);
+});
+exports.div = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_23 || (templateObject_23 = __makeTemplateObject(["<div ", ">", "</div>"], ["<div ", ">", "</div>"])), att, inner);
+});
+exports.hr = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_24 || (templateObject_24 = __makeTemplateObject(["<hr ", ">", "</hr>"], ["<hr ", ">", "</hr>"])), att, inner);
+});
+exports.li = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_25 || (templateObject_25 = __makeTemplateObject(["<li ", ">", "</li>"], ["<li ", ">", "</li>"])), att, inner);
+});
+exports.ol = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_26 || (templateObject_26 = __makeTemplateObject(["<ol ", ">\n      ", "\n    </ol>"], ["<ol ", ">\n      ", "\n    </ol>"])), att, inner);
+});
+exports.p = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_27 || (templateObject_27 = __makeTemplateObject(["<p ", ">", "</p>"], ["<p ", ">", "</p>"])), att, inner);
+});
+exports.pre = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_28 || (templateObject_28 = __makeTemplateObject(["<pre ", ">", "</pre>"], ["<pre ", ">", "</pre>"])), att, inner);
+});
+exports.ul = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_29 || (templateObject_29 = __makeTemplateObject(["<ul ", ">\n      ", "\n    </ul>"], ["<ul ", ">\n      ", "\n    </ul>"])), att, inner);
+});
+exports.a = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_30 || (templateObject_30 = __makeTemplateObject(["<a ", ">", "</a>"], ["<a ", ">", "</a>"])), att, inner);
+});
+exports.br = comp(function () {
+  return (0,
+  html_escape_1.html)(templateObject_31 || (templateObject_31 = __makeTemplateObject(["<br />"], ["<br />"])));
+});
+exports.code = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_32 || (templateObject_32 = __makeTemplateObject(["<code ", ">", "</code>"], ["<code ", ">", "</code>"])), att, inner);
+});
+exports.em = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_33 || (templateObject_33 = __makeTemplateObject(["<em ", ">", "</em>"], ["<em ", ">", "</em>"])), att, inner);
+});
+exports.i = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_34 || (templateObject_34 = __makeTemplateObject(["<i ", ">", "</i>"], ["<i ", ">", "</i>"])), att, inner);
+});
+exports.b = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_35 || (templateObject_35 = __makeTemplateObject(["<b ", ">", "</b>"], ["<b ", ">", "</b>"])), att, inner);
+});
+exports.small = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_36 || (templateObject_36 = __makeTemplateObject(["<small ", ">", "</small>"], ["<small ", ">", "</small>"])), att, inner);
+});
+exports.span = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_37 || (templateObject_37 = __makeTemplateObject(["<span ", ">", "</span>"], ["<span ", ">", "</span>"])), att, inner);
+});
+exports.strong = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_38 || (templateObject_38 = __makeTemplateObject(["<strong ", ">", "</strong>"], ["<strong ", ">", "</strong>"])), att, inner);
+});
+exports.sub = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_39 || (templateObject_39 = __makeTemplateObject(["<sub ", ">", "</sub>"], ["<sub ", ">", "</sub>"])), att, inner);
+});
+exports.sup = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_40 || (templateObject_40 = __makeTemplateObject(["<sup ", ">", "</sup>"], ["<sup ", ">", "</sup>"])), att, inner);
+});
+exports.time = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_41 || (templateObject_41 = __makeTemplateObject(["<time ", ">", "</time>"], ["<time ", ">", "</time>"])), att, inner);
+});
+exports.area = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_42 || (templateObject_42 = __makeTemplateObject(["<area ", ">", "</area>"], ["<area ", ">", "</area>"])), att, inner);
+});
+exports.audio = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_43 || (templateObject_43 = __makeTemplateObject(["<audio ", ">", "</audio>"], ["<audio ", ">", "</audio>"])), att, inner);
+});
+exports.img = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_44 || (templateObject_44 = __makeTemplateObject(["<img ", ">", "</img>"], ["<img ", ">", "</img>"])), att, inner);
+});
+exports.map = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_45 || (templateObject_45 = __makeTemplateObject(["<map ", ">", "</map>"], ["<map ", ">", "</map>"])), att, inner);
+});
+exports.track = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_46 || (templateObject_46 = __makeTemplateObject(["<track ", ">", "</track>"], ["<track ", ">", "</track>"])), att, inner);
+});
+exports.video = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_47 || (templateObject_47 = __makeTemplateObject(["<video ", ">", "</video>"], ["<video ", ">", "</video>"])), att, inner);
+});
+exports.embed = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_48 || (templateObject_48 = __makeTemplateObject(["<embed ", ">", "</embed>"], ["<embed ", ">", "</embed>"])), att, inner);
+});
+exports.iframe = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_49 || (templateObject_49 = __makeTemplateObject(["<iframe ", ">", "</iframe>"], ["<iframe ", ">", "</iframe>"])), att, inner);
+});
+exports.noembed = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_50 || (templateObject_50 = __makeTemplateObject(["<noembed ", ">", "</noembed>"], ["<noembed ", ">", "</noembed>"])), att, inner);
+});
+exports.object = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_51 || (templateObject_51 = __makeTemplateObject(["<object ", ">", "</object>"], ["<object ", ">", "</object>"])), att, inner);
+});
+exports.picture = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_52 || (templateObject_52 = __makeTemplateObject(["<picture ", ">", "</picture>"], ["<picture ", ">", "</picture>"])), att, inner);
+});
+exports.source = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_53 || (templateObject_53 = __makeTemplateObject(["<source ", ">", "</source>"], ["<source ", ">", "</source>"])), att, inner);
+});
+exports.canvas = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_54 || (templateObject_54 = __makeTemplateObject(["<canvas ", ">", "</canvas>"], ["<canvas ", ">", "</canvas>"])), att, inner);
+});
+exports.caption = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_55 || (templateObject_55 = __makeTemplateObject(["<caption ", ">\n      ", "\n    </caption>"], ["<caption ", ">\n      ", "\n    </caption>"])), att, inner);
+});
+exports.col = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_56 || (templateObject_56 = __makeTemplateObject(["<col ", ">", "</col>"], ["<col ", ">", "</col>"])), att, inner);
+});
+exports.colgroup = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_57 || (templateObject_57 = __makeTemplateObject(["<colgroup ", ">\n      ", "\n    </colgroup>"], ["<colgroup ", ">\n      ", "\n    </colgroup>"])), att, inner);
+});
+exports.table = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_58 || (templateObject_58 = __makeTemplateObject(["<table ", ">\n      ", "\n    </table>"], ["<table ", ">\n      ", "\n    </table>"])), att, inner);
+});
+exports.tbody = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_59 || (templateObject_59 = __makeTemplateObject(["<tbody ", ">\n      ", "\n    </tbody>"], ["<tbody ", ">\n      ", "\n    </tbody>"])), att, inner);
+});
+exports.td = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_60 || (templateObject_60 = __makeTemplateObject(["<td ", ">", "</td>"], ["<td ", ">", "</td>"])), att, inner);
+});
+exports.tfoot = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_61 || (templateObject_61 = __makeTemplateObject(["<tfoot ", ">\n      ", "\n    </tfoot>"], ["<tfoot ", ">\n      ", "\n    </tfoot>"])), att, inner);
+});
+exports.th = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_62 || (templateObject_62 = __makeTemplateObject(["<th ", ">", "</th>"], ["<th ", ">", "</th>"])), att, inner);
+});
+exports.thead = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_63 || (templateObject_63 = __makeTemplateObject(["<thead ", ">\n      ", "\n    </thead>"], ["<thead ", ">\n      ", "\n    </thead>"])), att, inner);
+});
+exports.tr = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_64 || (templateObject_64 = __makeTemplateObject(["<tr ", ">\n      ", "\n    </tr>"], ["<tr ", ">\n      ", "\n    </tr>"])), att, inner);
+});
+exports.button = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_65 || (templateObject_65 = __makeTemplateObject(["<button ", ">", "</button>"], ["<button ", ">", "</button>"])), att, inner);
+});
+exports.datalist = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_66 || (templateObject_66 = __makeTemplateObject(["<datalist ", ">", "</datalist>"], ["<datalist ", ">", "</datalist>"])), att, inner);
+});
+exports.fieldset = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_67 || (templateObject_67 = __makeTemplateObject(["<fieldset ", ">", "</fieldset>"], ["<fieldset ", ">", "</fieldset>"])), att, inner);
+});
+exports.form = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_68 || (templateObject_68 = __makeTemplateObject(["<form ", ">", "</form>"], ["<form ", ">", "</form>"])), att, inner);
+});
+exports.input = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_69 || (templateObject_69 = __makeTemplateObject(["<input ", ">", "</input>"], ["<input ", ">", "</input>"])), att, inner);
+});
+exports.label = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_70 || (templateObject_70 = __makeTemplateObject(["<label ", ">", "</label>"], ["<label ", ">", "</label>"])), att, inner);
+});
+exports.legend = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_71 || (templateObject_71 = __makeTemplateObject(["<legend ", ">", "</legend>"], ["<legend ", ">", "</legend>"])), att, inner);
+});
+exports.meter = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_72 || (templateObject_72 = __makeTemplateObject(["<meter ", ">", "</meter>"], ["<meter ", ">", "</meter>"])), att, inner);
+});
+exports.optgroup = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_73 || (templateObject_73 = __makeTemplateObject(["<optgroup ", ">", "</optgroup>"], ["<optgroup ", ">", "</optgroup>"])), att, inner);
+});
+exports.option = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_74 || (templateObject_74 = __makeTemplateObject(["<option ", ">", "</option>"], ["<option ", ">", "</option>"])), att, inner);
+});
+exports.select = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_75 || (templateObject_75 = __makeTemplateObject(["<select ", ">\n      ", "\n    </select>"], ["<select ", ">\n      ", "\n    </select>"])), att, inner);
+});
+exports.textarea = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_76 || (templateObject_76 = __makeTemplateObject(["<textarea ", ">", "</textarea>"], ["<textarea ", ">", "</textarea>"])), att, inner);
+});
+exports.details = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_77 || (templateObject_77 = __makeTemplateObject(["<details ", ">", "</details>"], ["<details ", ">", "</details>"])), att, inner);
+});
+exports.summary = comp(function (att) {
+  var inner = [];
+  for (var _i = 1; _i < arguments.length; _i++) {
+    inner[_i - 1] = arguments[_i];
+  }
+  return (0,
+  html_escape_1.html)(templateObject_78 || (templateObject_78 = __makeTemplateObject(["<summary ", ">", "</summary>"], ["<summary ", ">", "</summary>"])), att, inner);
 });
 // Utils parser
 function genAtt(item) {
-    return Object.keys(item)
-        .map(function (k) {
-        var value = escapeHtml(item[k]);
-        var key = escapeHtml(k);
-        return value ? "".concat(key, "=\"").concat(value, "\"") : "".concat(key);
+  return Object.keys(item)
+    .map(function (k) {
+      var value = (0, html_escape_1.html)(
+        templateObject_79 ||
+          (templateObject_79 = __makeTemplateObject(["", ""], ["", ""])),
+        item[k]
+      );
+      var key = (0, html_escape_1.html)(
+        templateObject_80 ||
+          (templateObject_80 = __makeTemplateObject(["", ""], ["", ""])),
+        k
+      );
+      return value ? "".concat(key, '="').concat(value, '"') : "".concat(key);
     })
-        .join(" ");
+    .join(" ");
 }
 function comp(a) {
-    return function (o, children) {
-        var att = genAtt(o);
-        var parse = typeof children === "string" ? children : children.join(" ");
-        return a(att, parse);
-    };
+  return function (o) {
+    var children = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+      children[_i - 1] = arguments[_i];
+    }
+    var att = genAtt(o);
+    return a.apply(void 0, __spreadArray([att], children, false));
+  };
 }
 exports.comp = comp;
-function escapeHtml(unsafe) {
-    return unsafe
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-}
+var templateObject_1,
+  templateObject_2,
+  templateObject_3,
+  templateObject_4,
+  templateObject_5,
+  templateObject_6,
+  templateObject_7,
+  templateObject_8,
+  templateObject_9,
+  templateObject_10,
+  templateObject_11,
+  templateObject_12,
+  templateObject_13,
+  templateObject_14,
+  templateObject_15,
+  templateObject_16,
+  templateObject_17,
+  templateObject_18,
+  templateObject_19,
+  templateObject_20,
+  templateObject_21,
+  templateObject_22,
+  templateObject_23,
+  templateObject_24,
+  templateObject_25,
+  templateObject_26,
+  templateObject_27,
+  templateObject_28,
+  templateObject_29,
+  templateObject_30,
+  templateObject_31,
+  templateObject_32,
+  templateObject_33,
+  templateObject_34,
+  templateObject_35,
+  templateObject_36,
+  templateObject_37,
+  templateObject_38,
+  templateObject_39,
+  templateObject_40,
+  templateObject_41,
+  templateObject_42,
+  templateObject_43,
+  templateObject_44,
+  templateObject_45,
+  templateObject_46,
+  templateObject_47,
+  templateObject_48,
+  templateObject_49,
+  templateObject_50,
+  templateObject_51,
+  templateObject_52,
+  templateObject_53,
+  templateObject_54,
+  templateObject_55,
+  templateObject_56,
+  templateObject_57,
+  templateObject_58,
+  templateObject_59,
+  templateObject_60,
+  templateObject_61,
+  templateObject_62,
+  templateObject_63,
+  templateObject_64,
+  templateObject_65,
+  templateObject_66,
+  templateObject_67,
+  templateObject_68,
+  templateObject_69,
+  templateObject_70,
+  templateObject_71,
+  templateObject_72,
+  templateObject_73,
+  templateObject_74,
+  templateObject_75,
+  templateObject_76,
+  templateObject_77,
+  templateObject_78,
+  templateObject_79,
+  templateObject_80;

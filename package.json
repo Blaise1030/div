@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npx tsc src/index.ts --outDir package/src --declaration true | cp README.md ./package",
+    "build": "npx tsc src/package/** --outDir package/src --declaration true | cp README.md ./package",
     "preview": "vite preview"
   },
   "devDependencies": {
