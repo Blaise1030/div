@@ -1,4 +1,5 @@
 import {tag, html} from "./package";
+
 const {div, input, button} = tag;
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = div(
