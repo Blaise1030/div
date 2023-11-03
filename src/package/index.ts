@@ -428,8 +428,8 @@ function genAtt(item: {[x: string]: string}) {
   return Object.keys(item)
     .map((k) => {
       const value = escHtml`${item[k]}`;
-      const key = escHtml`${k}`;
-      return value ? `${key}=${value}` : `${key}`;
+      const key = k;
+      return value ? `${key}="${value}"` : `${key}`;
     })
     .join(" ");
 }
@@ -442,6 +442,6 @@ export function comp(
 ) => HtmlEscapedString {
   return (o: {[x: string]: string}, ...children: HtmlEscapedString[]) => {
     const att = genAtt(o);
-    return a(att, ...children);
+    return a(raw(att), ...children);
   };
 }
