@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npx tsc src/package/** --outDir package/src --declaration true | cp README.md ./package",
+    "publish": "cd package && npm publish",
     "preview": "vite preview"
   },
   "devDependencies": {
