@@ -441,9 +441,9 @@ export function comp(
     o?: {[x: string]: string} | HtmlEscapedString | undefined,
     ...children: HtmlEscapedString[]
   ) => {
-    if (typeof o === "string" || typeof o === "undefined") {
-      return a("", ...children);
-    } else {
+    if (typeof o === "string") return a(o, ...children);
+    else if (typeof o === "undefined") return a("", ...children);
+    else {
       const att = genAtt(o);
       return a(raw(att), ...children);
     }

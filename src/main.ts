@@ -1,4 +1,4 @@
-import {a, br, div, escHtml, span} from "./package";
+import {a, br, div, escHtml, span} from "structr-composer";
 import {
   AccordianContent,
   AccordianTrigger,
@@ -45,6 +45,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = div(
       )
     )
   ),
+  span(escHtml`Blaise`, escHtml`Blaise`),
   br(),
   br(),
   br(),
