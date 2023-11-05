@@ -648,9 +648,10 @@ function comp(a) {
         for (var _i = 1; _i < arguments.length; _i++) {
             children[_i - 1] = arguments[_i];
         }
-        if (typeof o === "string" || typeof o === "undefined") {
+        if (typeof o === "string")
+            return a.apply(void 0, __spreadArray([o], children, false));
+        else if (typeof o === "undefined")
             return a.apply(void 0, __spreadArray([""], children, false));
-        }
         else {
             var att = genAtt(o);
             return a.apply(void 0, __spreadArray([raw(att)], children, false));
