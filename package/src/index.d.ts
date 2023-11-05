@@ -1,5 +1,6 @@
 export type HtmlEscaped = {
     isEscaped: true;
+    isEscapedString: boolean;
 };
 export type HtmlEscapedString = string & HtmlEscaped;
 export type StringBuffer = [string];

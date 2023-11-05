@@ -1,16 +1,18 @@
 import {HtmlEscapedString, div} from "structr-composer";
 import cn from "./utils/cn";
 
-export default function HoverCard({}, ...children: HtmlEscapedString[]) {
+export function Popover(
+  p: {[x: string]: string},
+  ...children: HtmlEscapedString[]
+) {
   return div(
     {
-      "@mouseleave": "hoverCardLeave()",
-      "@mouseover": "hoverCardEnter()",
-      class: "relative w-fit",
+      ...p,
+      class: cn(["relative w-fit", p.class]),
       "x-data": `{ 
         hoverCardHovered: false,
-        hoverCardDelay: 600,
-        hoverCardLeaveDelay: 500,
+        hoverCardDelay: 300,
+        hoverCardLeaveDelay: 300,
         hoverCardTimout: null,
         hoverCardLeaveTimeout: null,
         hoverCardEnter () {
@@ -29,20 +31,28 @@ export default function HoverCard({}, ...children: HtmlEscapedString[]) {
                 this.hoverCardHovered = false;
             }, this.hoverCardLeaveDelay);
         }
-    }`,
+      }`,
     },
     ...children
   );
 }
 
-export function HoverCardTrigger(
+export function PopoverTrigger(
   p: {[x: string]: string},
   ...children: HtmlEscapedString[]
 ) {
-  return div({...p, class: cn(["w-fit", p?.class ?? ""])}, ...children);
+  return div(
+    {
+      ...p,
+      "@mouseleave": "hoverCardLeave()",
+      "@mouseover": "hoverCardEnter()",
+      class: cn(["cursor-pointer", p.class]),
+    },
+    div(...children)
+  );
 }
 
-export function HoverCardContent(
+export function PopoverContent(
   p: {[x: string]: string},
   ...children: HtmlEscapedString[]
 ) {
@@ -52,16 +62,15 @@ export function HoverCardContent(
       "x-show": "hoverCardHovered",
       "x-cloak": "",
       class: cn([
-        "absolute top-0 w-[365px] max-w-lg mt-5 z-30 translate-y-3 left-0",
-        p?.class ?? "",
+        "absolute top-0 w-[365px] max-w-lg mt-5 z-30 translate-y-3",
+        p.class,
       ]),
     },
     div(
       {
+        class: "border-border p-4 bg-background rounded-xl border shadow",
         "x-show": "hoverCardHovered",
         "x-transition": "",
-        class:
-          "w-[full] h-auto bg-background space-x-3 p-5 flex items-start rounded-md shadow-sm border border-border",
       },
       ...children
     )

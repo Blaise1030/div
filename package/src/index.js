@@ -54,6 +54,7 @@ var escapeToBuffer = function (str, buffer) {
 var raw = function (value) {
     var escapedString = new String(value);
     escapedString.isEscaped = true;
+    escapedString.isEscapedString = true;
     return escapedString;
 };
 var escHtml = function (strings) {
@@ -648,10 +649,12 @@ function comp(a) {
         for (var _i = 1; _i < arguments.length; _i++) {
             children[_i - 1] = arguments[_i];
         }
-        if (typeof o === "string")
-            return a.apply(void 0, __spreadArray([o], children, false));
-        else if (typeof o === "undefined")
+        if (typeof o === "undefined")
             return a.apply(void 0, __spreadArray([""], children, false));
+        else if (typeof o === "object" && (o === null || o === void 0 ? void 0 : o.isEscapedString)) {
+            var escapedString = o;
+            return a.apply(void 0, __spreadArray([""], __spreadArray([escapedString], children, true), false));
+        }
         else {
             var att = genAtt(o);
             return a.apply(void 0, __spreadArray([raw(att)], children, false));

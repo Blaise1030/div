@@ -24,6 +24,8 @@ import {
   DropdownSubGroupContent,
   DropdownSubGroupTrigger,
 } from "./components/DropdownMenu";
+import Badge from "./components/Badge";
+import {Switch} from "./components/Switch";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = div(
   {class: "p-4", "x-data": `{accordian: '1'}`},
@@ -45,10 +47,8 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = div(
       )
     )
   ),
-  span(escHtml`Blaise`, escHtml`Blaise`),
-  br(),
-  br(),
-  br(),
+  div({"x-data": "{open:true}"}, Switch({value: "open"})),
+  Badge({variant: "destructive"}, escHtml`Blaise`),
   DropdownMenu(
     {},
     DropdownMenuTrigger({}, Button({variant: "outline"}, escHtml`Trigger`)),
@@ -58,12 +58,12 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = div(
       DropdownMenuDivider(),
       DropdownMenuItem(
         {"@click": `console.log('Profile')`},
-        span({}, escHtml`Profile`),
+        span(escHtml`Profile`),
         DropdownMenuItemIcon({}, escHtml`⇧⌘P`)
       ),
       DropdownMenuItem(
         {},
-        span({}, escHtml`Billing`),
+        span(escHtml`Billing`),
         DropdownMenuItemIcon({}, escHtml`⌘B`)
       ),
       DropdownMenuItem(

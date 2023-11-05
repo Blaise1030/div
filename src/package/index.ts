@@ -1,6 +1,6 @@
 // HTML Escape
 
-export type HtmlEscaped = {isEscaped: true};
+export type HtmlEscaped = {isEscaped: true; isEscapedString: boolean};
 export type HtmlEscapedString = string & HtmlEscaped;
 export type StringBuffer = [string];
 
@@ -48,6 +48,7 @@ const escapeToBuffer = (str: string, buffer: StringBuffer): void => {
 const raw = (value: unknown): HtmlEscapedString => {
   const escapedString = new String(value) as HtmlEscapedString;
   escapedString.isEscaped = true;
+  escapedString.isEscapedString = true;
 
   return escapedString;
 };
@@ -438,13 +439,15 @@ export function comp(
   a: (att: string, ...inner: HtmlEscapedString[]) => HtmlEscapedString
 ) {
   return (
-    o?: {[x: string]: string} | HtmlEscapedString | undefined,
+    o?: {[x: string]: string} | HtmlEscapedString,
     ...children: HtmlEscapedString[]
   ) => {
-    if (typeof o === "string") return a(o, ...children);
-    else if (typeof o === "undefined") return a("", ...children);
-    else {
-      const att = genAtt(o);
+    if (typeof o === "undefined") return a("", ...children);
+    else if (typeof o === "object" && o?.isEscapedString) {
+      const escapedString = o as any;
+      return a("", ...[escapedString as HtmlEscapedString, ...children]);
+    } else {
+      const att = genAtt(o as {[x: string]: string});
       return a(raw(att), ...children);
     }
   };

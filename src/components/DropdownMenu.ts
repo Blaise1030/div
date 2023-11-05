@@ -14,9 +14,9 @@ export function DropdownMenuTrigger(
 ) {
   return div(
     {
+      ...props,
       "@click": "dropdownOpen=true",
       class: cn([props?.class]),
-      ...props,
     },
     ...children
   );
@@ -27,7 +27,7 @@ export function DropdownMenuTitle(
   ...children: HtmlEscapedString[]
 ) {
   return div(
-    {class: cn(["px-2 py-1.5 text-sm font-semibold", p?.class]), ...p},
+    {...p, class: cn(["px-2 py-1.5 text-sm font-semibold", p?.class])},
     ...children
   );
 }
@@ -38,14 +38,14 @@ export function DropdownMenuContent(
 ) {
   return div(
     {
+      ...p,
       "x-show": "dropdownOpen",
       "@click.away": "dropdownOpen=false",
       "x-transition:enter": "ease-out duration-200",
       "x-transition:enter-start": "-translate-y-2",
       "x-transition:enter-end": "translate-y-0",
-      class: cn(["absolute top-0 z-50 w-56 mt-12 left-0", p?.class]),
+      class: cn(["absolute top-0 z-50 w-56 mt-10 left-0", p?.class]),
       "x-cloak": "",
-      ...p,
     },
     div(
       {
@@ -67,11 +67,11 @@ export function DropdownMenuItem(
 ) {
   return button(
     {
+      ...props,
       class: cn([
         "relative flex cursor-default select-none hover:bg-muted items-center rounded px-2 py-1.5 text-sm outline-none transition-colors disabled:pointer-events-none disabled:opacity-50 w-full",
         props.class,
       ]),
-      ...props,
     },
     ...children
   );
@@ -82,7 +82,7 @@ export function DropdownMenuItemIcon(
   ...children: HtmlEscapedString[]
 ) {
   return span(
-    {class: cn(["ml-auto text-xs tracking-widest opacity-60", p?.class]), ...p},
+    {...p, class: cn(["ml-auto text-xs tracking-widest opacity-60", p?.class])},
     ...children
   );
 }
@@ -91,7 +91,7 @@ export function DropdownSubGroup(
   p: {[x: string]: string},
   ...children: HtmlEscapedString[]
 ) {
-  return div({class: cn(["relative group", p?.class]), ...p}, ...children);
+  return div({...p, class: cn(["relative group", p?.class])}, ...children);
 }
 
 export function DropdownSubGroupTrigger(
@@ -100,11 +100,11 @@ export function DropdownSubGroupTrigger(
 ) {
   return button(
     {
+      ...p,
       class: cn([
         "relative flex cursor-default select-none hover:bg-muted items-center rounded px-2 py-1.5 text-sm outline-none transition-colors disabled:pointer-events-none disabled:opacity-50 w-full",
         p?.class,
       ]),
-      ...p,
     },
     ...children,
     DropdownMenuItemIcon({}, chevronRight)
@@ -117,11 +117,11 @@ export function DropdownSubGroupContent(
 ) {
   return div(
     {
+      ...p,
       class: cn([
         "absolute top-0 right-0 invisible mr-1 duration-200 ease-out translate-x-full opacity-0 group-hover:mr-0 group-hover:visible group-hover:opacity-100",
         p?.class,
       ]),
-      ...p,
     },
     div(
       {
