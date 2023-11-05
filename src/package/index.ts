@@ -436,12 +436,16 @@ function genAtt(item: {[x: string]: string}) {
 
 export function comp(
   a: (att: string, ...inner: HtmlEscapedString[]) => HtmlEscapedString
-): (
-  i: {[x: string]: string},
-  ...children: HtmlEscapedString[]
-) => HtmlEscapedString {
-  return (o: {[x: string]: string}, ...children: HtmlEscapedString[]) => {
-    const att = genAtt(o);
-    return a(raw(att), ...children);
+) {
+  return (
+    o?: {[x: string]: string} | HtmlEscapedString | undefined,
+    ...children: HtmlEscapedString[]
+  ) => {
+    if (typeof o === "string" || typeof o === "undefined") {
+      return a("", ...children);
+    } else {
+      const att = genAtt(o);
+      return a(raw(att), ...children);
+    }
   };
 }

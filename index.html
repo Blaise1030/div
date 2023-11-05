@@ -64,7 +64,14 @@
   </style>
 </head>
 
-<body>
+<body class="bg-background text-foreground border-border" x-bind:class="{ 'dark': theme === 'dark' }"
+  x-bind:data-theme="theme" un-cloak x-data="{ 
+        theme :localStorage.getItem('theme') ?? 'light', 
+        setTheme(t){
+          this.theme = t;
+          localStorage.setItem('theme', t);
+        }
+     }">
   <div id="app"></div>
   <script type="module" src="/src/main.ts"></script>
 </body>

@@ -4,240 +4,240 @@ export type HtmlEscaped = {
 export type HtmlEscapedString = string & HtmlEscaped;
 export type StringBuffer = [string];
 export declare const escHtml: (strings: TemplateStringsArray, ...values: unknown[]) => HtmlEscapedString;
-export declare const head: (i: {
+export declare const head: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const meta: (i: {
+export declare const meta: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const link: (i: {
+export declare const link: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const title: (i: {
+export declare const title: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const script: (i: {
+export declare const script: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const html: (i: {
+export declare const html: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const body: (i: {
+export declare const body: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const style: (i: {
+export declare const style: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const address: (i: {
+export declare const address: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const article: (i: {
+export declare const article: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const aside: (i: {
+export declare const aside: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const footer: (i: {
+export declare const footer: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const header: (i: {
+export declare const header: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const h1: (i: {
+export declare const h1: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const h2: (i: {
+export declare const h2: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const h3: (i: {
+export declare const h3: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const h4: (i: {
+export declare const h4: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const h5: (i: {
+export declare const h5: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const main: (i: {
+export declare const main: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const nav: (i: {
+export declare const nav: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const section: (i: {
+export declare const section: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const blockquote: (i: {
+export declare const blockquote: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const div: (i: {
+export declare const div: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const hr: (i: {
+export declare const hr: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const li: (i: {
+export declare const li: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const ol: (i: {
+export declare const ol: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const p: (i: {
+export declare const p: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const pre: (i: {
+export declare const pre: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const ul: (i: {
+export declare const ul: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const a: (i: {
+export declare const a: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const br: (i: {
+export declare const br: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const code: (i: {
+export declare const code: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const em: (i: {
+export declare const em: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const i: (i: {
+export declare const i: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const b: (i: {
+export declare const b: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const small: (i: {
+export declare const small: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const span: (i: {
+export declare const span: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const strong: (i: {
+export declare const strong: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const sub: (i: {
+export declare const sub: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const sup: (i: {
+export declare const sup: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const time: (i: {
+export declare const time: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const area: (i: {
+export declare const area: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const audio: (i: {
+export declare const audio: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const img: (i: {
+export declare const img: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const map: (i: {
+export declare const map: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const track: (i: {
+export declare const track: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const video: (i: {
+export declare const video: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const embed: (i: {
+export declare const embed: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const iframe: (i: {
+export declare const iframe: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const noembed: (i: {
+export declare const noembed: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const object: (i: {
+export declare const object: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const picture: (i: {
+export declare const picture: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const source: (i: {
+export declare const source: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const canvas: (i: {
+export declare const canvas: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const caption: (i: {
+export declare const caption: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const col: (i: {
+export declare const col: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const colgroup: (i: {
+export declare const colgroup: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const table: (i: {
+export declare const table: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const tbody: (i: {
+export declare const tbody: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const td: (i: {
+export declare const td: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const tfoot: (i: {
+export declare const tfoot: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const th: (i: {
+export declare const th: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const thead: (i: {
+export declare const thead: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const tr: (i: {
+export declare const tr: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const button: (i: {
+export declare const button: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const datalist: (i: {
+export declare const datalist: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const fieldset: (i: {
+export declare const fieldset: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const form: (i: {
+export declare const form: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const input: (i: {
+export declare const input: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const label: (i: {
+export declare const label: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const legend: (i: {
+export declare const legend: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const meter: (i: {
+export declare const meter: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const optgroup: (i: {
+export declare const optgroup: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const option: (i: {
+export declare const option: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const select: (i: {
+export declare const select: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const textarea: (i: {
+export declare const textarea: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const details: (i: {
+export declare const details: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare const summary: (i: {
+export declare const summary: (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
-export declare function comp(a: (att: string, ...inner: HtmlEscapedString[]) => HtmlEscapedString): (i: {
+export declare function comp(a: (att: string, ...inner: HtmlEscapedString[]) => HtmlEscapedString): (o?: HtmlEscapedString | {
     [x: string]: string;
 }, ...children: HtmlEscapedString[]) => HtmlEscapedString;
